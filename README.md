@@ -74,7 +74,9 @@ Ingresar el siguiente código en el formulario:
 
 Si aparece un mensaje de alerta (alert()) en el navegador, significa que la aplicación es vulnerable.
 
-![](images/xss2.png)
+<div align="center">
+  <img src="/Imagenes/3.png" width="500">
+</div>
 
 **Explotación 2**
 
@@ -82,7 +84,9 @@ Podríamos redirigir a una página de phishing:
 
 `<script>window.location='https://fakeupdate.net/win11/'</script>`
 
-![](images/xss3.png)
+<div align="center">
+  <img src="/Imagenes/4.png" width="500">
+</div>
 
 
 **Capturar cookies del usuario (en ataques reales):**
