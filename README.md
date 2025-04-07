@@ -13,8 +13,7 @@ Tenemos como objetivo:
 
 ## ¿Qué es XSS?
 ---
-Cross-Site Scripting (XSS) ocurre cuando una aplicación no valida ni sanitiza l>
-scripts maliciosos se ejecuten en el navegador de otros usuarios.
+Cross-Site Scripting (XSS) ocurre cuando una aplicación no valida ni sanitiza adecuadamente la entrada del usuario, lo que permite que scripts maliciosos se ejecuten en el navegador de otros usuarios.
 
 Tipos de XSS:
 - **Reflejado**: Se ejecuta inmediatamente al hacer la solicitud con un payload malicioso.
@@ -27,7 +26,7 @@ Tipos de XSS:
 
 > Lee el siguiente [documento sobre Explotación y Mitigación de ataques de Inyección SQL](./files/ExplotacionYMitigacionXSS.pdf) de Raúl Fuentes. Nos va a seguir de guía para aprender a explotar y mitigar ataques de inyección XSS Reflejado en nuestro entorno de pruebas.
  
-> También y como marco de referencia, tienes [la sección de correspondiente de ataque XSS reglejado de la **Proyecto Web Security Testing Guide** (WSTG) del proyecto **OWASP**.](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting).
+> También y como marco de referencia, tienes [la sección de correspondiente de ataque XSS reflejado de la **Proyecto Web Security Testing Guide** (WSTG) del proyecto **OWASP**.](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting).
 
 Vamos realizando operaciones:
 
@@ -47,13 +46,19 @@ if (isset($_POST['comment'])) {
 </form>
 ~~~
 
+<div align="center">
+  <img src="/Imagenes/1.png" width="500">
+</div>
+
 Este código muestra un formulario donde el usuario puede ingresar un comentario en un campo de texto. Cuando
 el usuario envía el formulario, el comentario ingresado se muestra en la pantalla con el mensaje "Comentario publicado:
 \[comentario\]". 
 
 El Código no sanitiza la entrada del usuario, lo que permite inyectar scripts maliciosos.
 
-![](images/xss1.png)
+<div align="center">
+  <img src="/Imagenes/2.png" width="500">
+</div>
 
 ### **Explotación de XSS**
 ---
